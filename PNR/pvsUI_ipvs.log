@@ -1,0 +1,11 @@
+
+
+An exception has propagated all the way to the main segment of
+  /package/eda2/cadence/PVS231/tools.lnx86/pvs/bin/64bit/pvsgui
+called with 3 arguments.
+==== begin exception ====
+Unknown exception
+Details: Caught unknown exception
+====   end exception ====
+
+Execution aborted.  Exiting with status 1.

@@ -1,0 +1,7 @@
+xrun -clean
+rm -rf xrun.*
+rm -rf waves.shm
+rm -rf vivado_*.backup.log
+rm -rf vivado_*.backup.jou
+rm -rf vivado.jou
+rm -rf vivado.log

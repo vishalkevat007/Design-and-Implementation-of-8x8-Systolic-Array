@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/addr_sel.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/quantize.v,,addr_sel,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/quantize.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/sram_128x32b.v,,quantize,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/sram_128x32b.v,1745597286,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/sram_16x128b.v,,sram_128x32b,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/sram_16x128b.v,1745597233,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/systolic.v,,sram_16x128b,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/systolic.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/systolic_controll.v,,systolic,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/systolic_controll.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/tpu_top.v,,systolic_controll,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/test_tpu.v,1745169494,verilog,,,,test_tpu,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/tpu_top.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/write_out.v,,tpu_top,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/vivado_simulation/vivado_simulation.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/write_out.v,1744569496,verilog,,/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/test_tpu.v,,write_out,,,,,,,,

@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../addr_sel.v" \
+"../../../../../quantize.v" \
+"../../../../../sram_128x32b.v" \
+"../../../../../sram_16x128b.v" \
+"../../../../../systolic.v" \
+"../../../../../systolic_controll.v" \
+"../../../../../tpu_top.v" \
+"../../../../../write_out.v" \
+"../../../../../test_tpu.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

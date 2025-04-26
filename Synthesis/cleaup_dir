@@ -1,0 +1,5 @@
+rm -rf outputs
+rm -rf reports
+rm -rf fv
+rm -rf genus.*
+

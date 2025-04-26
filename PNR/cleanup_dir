@@ -1,0 +1,11 @@
+rm -rf placeOpt
+rm -rf postCTSopt
+rm -rf timingReports
+rm -rf innovus.*
+rm -rf pvsUI_ipvs.log
+rm -rf placeOpt.tmp
+rm -rf tpu_top.conn.*
+rm -rf tpu_top.drc.*
+rm -rf streamOut.map
+rm -rf power.rpt
+rm -rf checkDesign
