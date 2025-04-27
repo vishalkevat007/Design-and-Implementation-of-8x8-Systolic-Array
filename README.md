@@ -15,8 +15,13 @@ This project implements an 8x8 systolic array for high-performance matrix multip
 ---
 
 ## Introduction
-Matrix multiplication is a critical operation in many modern computing applications, including machine learning, digital signal processing, and scientific computing. Systolic arrays provide a highly efficient, parallel architecture to accelerate matrix operations by organizing processing elements (PEs) in a regular structure where data flows rhythmically across the array.  
-In this project, we design an 8×8 systolic array using Verilog HDL and implement the full digital design flow from RTL coding, simulation, and synthesis to layout generation and gate-level verification. The project demonstrates practical usage of industry-grade EDA tools for ASIC design and provides a foundation for building scalable hardware accelerators.
+The systolic array architecture is a powerful and scalable structure designed to accelerate matrix operations such as matrix multiplication, a key computation in many fields like machine learning and signal processing. In this project, we implement an 8×8 systolic array consisting of 64 processing elements (PEs) arranged in a regular 2D mesh.
+
+Each PE is responsible for performing multiply-accumulate (MAC) operations, receiving inputs from activation FIFOs (First-In-First-Out buffers) and weight FIFOs at the array's boundaries. A centralized control unit manages the flow of data into the FIFOs and orchestrates the overall operation. As data moves rhythmically across the array horizontally and vertically, each PE computes partial results and passes intermediate values to its neighboring PEs.
+
+This project covers the complete digital design flow for the 8×8 systolic array, from RTL development and pre-synthesis simulation to synthesis, formal equivalence checking, place-and-route (PnR), and gate-level simulations, enabling a full ASIC implementation.
+
+![Synthesized Schematic](images/architecture.png)
 
 ---
 
