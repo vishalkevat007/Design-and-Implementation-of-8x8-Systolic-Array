@@ -15,7 +15,8 @@ This project implements an 8x8 systolic array for high-performance matrix multip
 ---
 
 ## Introduction
-A systolic array is a network of processing elements (PEs) that rhythmically compute and propagate data in a pipelined manner, enabling high-throughput matrix operations. This project focuses on an 8x8 systolic array design for matrix multiplication, optimized for low latency and area efficiency using the **Cadence 45nm PDK**. The implementation follows a complete RTL-to-GDS flow, including functional verification, logic synthesis, physical design, and post-layout validation.
+Matrix multiplication is a critical operation in many modern computing applications, including machine learning, digital signal processing, and scientific computing. Systolic arrays provide a highly efficient, parallel architecture to accelerate matrix operations by organizing processing elements (PEs) in a regular structure where data flows rhythmically across the array.  
+In this project, we design an 8×8 systolic array using Verilog HDL and implement the full digital design flow from RTL coding, simulation, and synthesis to layout generation and gate-level verification. The project demonstrates practical usage of industry-grade EDA tools for ASIC design and provides a foundation for building scalable hardware accelerators.
 
 ---
 
@@ -74,6 +75,10 @@ The following tools and libraries are required to reproduce this workflow:
         ```bash
         cd Synthesis/
         genus -f syn.tcl
+
+    - Post-Synthesis Schematic:  
+    ![Synthesized Schematic](Synthesis/gui_schematic.gif)  
+    *Schematic of the 8x8 systolic array generated after synthesis.*
     - The generated netlists and synthesis reports are located in the Synthesis/output/ directory.
 
 3. **Equivalence Check**:
