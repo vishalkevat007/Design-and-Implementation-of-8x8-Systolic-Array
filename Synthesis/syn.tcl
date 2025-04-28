@@ -6,9 +6,6 @@
 set_db init_lib_search_path ../LIB/
 set_db init_hdl_search_path ../RTL/
 
-# Prevent constant‑0 flip-flop removal
-#set_db optimize_constant_0_flops false
-
 # Read library and RTL design files
 read_libs slow_vdd1v0_basicCells.lib
 
@@ -22,8 +19,20 @@ read_hdl {
     write_out.v
 }
 
+# Prevent unused registers removal
+set_db hdl_preserve_unused_registers true
+
 # Set the top-level design
 elaborate tpu_top
+
+# Disable flip-flop and latch removal/optimizations
+set_db delete_unloaded_seqs false
+set_db optimize_constant_feedback_seq false
+set_db optimize_constant_0_flops false
+set_db optimize_constant_1_flops false
+set_db optimize_merge_flops false
+set_db optimize_constant_latches false
+set_db optimize_merge_latches false
 
 # Read constraints
 read_sdc constraints/constraints_top.sdc

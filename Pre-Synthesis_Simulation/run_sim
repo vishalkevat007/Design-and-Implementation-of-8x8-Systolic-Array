@@ -1,1 +1,1 @@
-xrun -f filelist.f -access +rwc -gui &
+xrun -f filelist.txt -access +rwc -gui &

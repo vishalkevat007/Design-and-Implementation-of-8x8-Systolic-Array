@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr 27 23:51:27 2025
+# Process ID: 3667
+# Current directory: /scratch/asicfab/a/vkevat/Design-and-Implementation-of-8x8-Systolic-Array/Pre-Synthesis_Simulation
+# Command line: vivado
+# Log file: /scratch/asicfab/a/vkevat/Design-and-Implementation-of-8x8-Systolic-Array/Pre-Synthesis_Simulation/vivado.log
+# Journal file: /scratch/asicfab/a/vkevat/Design-and-Implementation-of-8x8-Systolic-Array/Pre-Synthesis_Simulation/vivado.jou
+# Running On: asicfab.ecn.purdue.edu, OS: Linux, CPU Frequency: 2295.805 MHz, CPU Physical cores: 32, Host memory: 269942 MB
+#-----------------------------------------------------------
+start_gui
+open_project /scratch/asicfab/a/vkevat/Design-and-Implementation-of-8x8-Systolic-Array/Pre-Synthesis_Simulation/vivado_simulation/vivado_simulation.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source test_tpu.tcl
+close_sim
+launch_simulation
+source test_tpu.tcl
+close_sim

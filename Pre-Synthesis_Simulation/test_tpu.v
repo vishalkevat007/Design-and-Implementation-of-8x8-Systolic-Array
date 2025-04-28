@@ -242,17 +242,17 @@ initial begin
 end
 */
 initial begin
-//    $readmemb("data/mat1.txt", mat1);
-//    $readmemb("data/mat2.txt", mat2);
-//    $readmemb("golden/golden1.txt",golden1);
-//    $readmemb("golden/golden2.txt",golden2);
-//    $readmemb("golden/golden3.txt",golden3);
+    $readmemb("./mat1.txt", mat1);
+    $readmemb("./mat2.txt", mat2);
+    $readmemb("./golden1.txt",golden1);
+    $readmemb("./golden2.txt",golden2);
+    $readmemb("./golden3.txt",golden3);
     
-    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/mat1.txt", mat1);
-    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/mat2.txt", mat2);
-    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden1.txt",golden1);
-    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden2.txt",golden2);
-    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden3.txt",golden3);
+//    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/mat1.txt", mat1);
+//    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/mat2.txt", mat2);
+//    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden1.txt",golden1);
+//    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden2.txt",golden2);
+//    $readmemb("/scratch/asicfab/a/vkevat/systolic_design/Pre-Synthesis_Simulation/golden3.txt",golden3);
 
     #(`cycle_period);
     
