@@ -22,7 +22,9 @@ Each PE is responsible for performing multiply-accumulate (MAC) operations, rece
 This project covers the complete digital design flow for the 8×8 systolic array, from RTL development and pre-synthesis simulation to synthesis, formal equivalence checking, place-and-route (PnR), and gate-level simulations, enabling a full ASIC implementation.
 
 ![Synthesized Schematic](images/architecture.png)
-*Fig 1. Architecture of 8x8 systolic array.*
+<div align="center">
+  <em>Fig 1. Architecture of 8x8 systolic array.</em>
+</div>
 
 ---
 
@@ -109,9 +111,12 @@ The following tools and libraries are required to reproduce this workflow:
         ```bash
         cd Synthesis/
         genus -f syn.tcl
-    - Post-Synthesis Schematic:  
+    - Post-Synthesis Schematic:
     ![Synthesized Schematic](Synthesis/gui_schematic.gif)  
-    *Fig 2. Schematic of the 8x8 systolic array generated after synthesis.*
+    <div align="center">
+      <em>Fig 2. Schematic of the 8x8 systolic array generated after synthesis.</em>
+    </div>
+
     - The generated netlists and synthesis reports are located in the Synthesis/output/ directory.
 
 4. **Logic Equivalence Check**:
@@ -155,7 +160,9 @@ The following tools and libraries are required to reproduce this workflow:
         source runPnR.tcl
     - Physical Layout:
     ![Layout](images/layout.png)
-    *Fig 3. Physical Layout of the design.*
+    <div align="center">
+      <em>Fig 3. Physical Layout of the design.</em>
+    </div>
     - Final GDSII, timing reports, and layout files are available inside the PNR/ directory.
 
 
