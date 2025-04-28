@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-gui
+-MESSAGES
++EMGRLOG
+xrun.log
+-XLSTIME
+1745813854
+-XLKEEP
+-XLMODE
+./xcelium.d/run.lnx8664.23.03.d
+-RUNMODE
+-CDSLIB
+./xcelium.d/run.lnx8664.23.03.d/cds.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.23.03.d/hdl.var
+-XLNAME
+xrun
+-XLVERSION
+"TOOL:	xrun(64)	23.03-s004"
+-XLNAME
+./xcelium.d/run.lnx8664.23.03.d/asicfab.ecn.purdue.edu_63178

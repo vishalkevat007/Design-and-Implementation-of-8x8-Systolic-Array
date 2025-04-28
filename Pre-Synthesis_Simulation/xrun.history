@@ -1,0 +1,7 @@
+s1(27Apr2025:23:50:54):  xrun -f filelist.f -access +rwc -gui 
+s2(28Apr2025:00:07:49):  xrun help 
+s3(28Apr2025:00:08:10):  xrun help help 
+s4(28Apr2025:00:13:17):  xrun -f filelist.txt -access +rwc -gui 
+s5(28Apr2025:00:14:42):  xrun -f filelist.txt -access +rwc -gui 
+s6(28Apr2025:00:16:15):  xrun -f filelist.txt -access +rwc -gui 
+s7(28Apr2025:00:17:34):  xrun -f filelist.txt -access +rwc -gui 

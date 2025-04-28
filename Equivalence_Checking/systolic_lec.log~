@@ -9,9 +9,9 @@ in a license agreement controlling such use and disclosure.
 
 // Warning: This version is 332 days old. You can download the latest version from http://downloads.cadence.com.
 
-CPU time     : 0.44    seconds
+CPU time     : 0.46    seconds
 Elapse time  : 1       seconds
-Memory usage : 68.56   M bytes
+Memory usage : 68.49   M bytes
 // Command: read library ../LIB/slow_vdd1v0_basicCells.v -verilog -both
 // Parsing file ../LIB/slow_vdd1v0_basicCells.v ...
 // Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:56)
@@ -22,9 +22,9 @@ Memory usage : 68.56   M bytes
 // Note: (HRC3.5b) Open output port connection is detected (occurrence:80)
 // Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
 // Note: Read VERILOG library successfully
-CPU time     : 0.56    seconds
+CPU time     : 0.60    seconds
 Elapse time  : 1       seconds
-Memory usage : 91.73   M bytes
+Memory usage : 91.66   M bytes
 // Command: read design \
 //             ../RTL/tpu_top.v \
 //             ../RTL/addr_sel.v \
@@ -52,9 +52,9 @@ Memory usage : 91.73   M bytes
 // Warning: (RTL7.11b) Unsigned reference with index/part selection to a signed variable (occurrence:16)
 // Note: (RTL8.1) Multiple multipliers/dividers are in module/entity (occurrence:1)
 // Note: Read VERILOG design successfully
-CPU time     : 0.80    seconds
+CPU time     : 0.84    seconds
 Elapse time  : 2       seconds
-Memory usage : 114.94  M bytes
+Memory usage : 114.88  M bytes
 // Command: read design ../Synthesis/outputs/tpu_netlist.v -verilog -revised
 // Parsing file ../Synthesis/outputs/tpu_netlist.v ...
 // Revised root module is set to 'tpu_top'
@@ -65,9 +65,9 @@ Memory usage : 114.94  M bytes
 // Warning: There are 8 undriven nets in Revised
 // Warning: There are 8 undriven pins in Revised
 // Note: Read VERILOG design successfully
-CPU time     : 1.76    seconds
+CPU time     : 1.79    seconds
 Elapse time  : 3       seconds
-Memory usage : 131.56  M bytes
+Memory usage : 131.49  M bytes
 // Command: set system mode lec
 // Processing Golden ...
 // Modeling Golden ...
@@ -75,9 +75,9 @@ Memory usage : 131.56  M bytes
 // Processing Revised ...
 // Modeling Revised ...
 // (F28) Converted 8 internal output port(s) to inout port(s)
-CPU time     : 2.85    seconds
+CPU time     : 2.86    seconds
 Elapse time  : 4       seconds
-Memory usage : 189.06  M bytes
+Memory usage : 189.00  M bytes
 // Mapping key points ...
 ================================================================================
 Mapped points: SYSTEM class
@@ -88,9 +88,9 @@ Golden            131    446    2841      3418
 --------------------------------------------------------------------------------
 Revised           131    446    2841      3418    
 ================================================================================
-CPU time     : 3.15    seconds
+CPU time     : 3.12    seconds
 Elapse time  : 4       seconds
-Memory usage : 191.20  M bytes
+Memory usage : 191.12  M bytes
 // Command: add compared point -all
 // 3287 compared points added to compare list
 // Command: compare
@@ -99,9 +99,9 @@ Compared points      PO     DFF       Total
 --------------------------------------------------------------------------------
 Equivalent           446    2841      3287    
 ================================================================================
-CPU time     : 20.01   seconds
-Elapse time  : 21      seconds
-Memory usage : 266.09  M bytes
+CPU time     : 22.48   seconds
+Elapse time  : 24      seconds
+Memory usage : 266.16  M bytes
 // Command: report verification
 ================================================================================
                             Verification Report
@@ -121,3 +121,53 @@ Category                                                                  Count
 6. Compare Results:                                                        PASS
 ================================================================================
 // Command: exit
+// Command: report verification -v > /tmp/LECVerificationReport.txt
+// Warning: Cannot open output file /tmp/LECVerificationReport.txt to write
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+     Tri-stated output:                                        checked
+     Revised X signals set to E:                               yes
+     Floating signals tied to Z:                               yes
+     Command "add clock" for clock-gating:                     not used
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+     All primary outputs are mapped:                           yes
+     Not-mapped DFF/DLAT is detected:                          no
+     All mapped points are added as compare points:            yes
+     All compared points are compared:                         yes
+     User added black box:                                     no
+     Black box mapped with different module name:              no
+     Empty module is not black boxed:                          no
+     Command "add ignore outputs" used:                        no
+     Always false constraints detected:                        no
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+     Change gate type:                                         no
+     Change wire:                                              no
+     Primary input added by user:                              no
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+     Multiple clocks in the design:                            no
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+     Duplicate module definition:                              no
+     Black box due to undefined cells:                         no
+     Golden design has abnormal ratio of unreachable gates:    no
+     Ratio of golden unreachable gates:                        3%
+     Revised design has abnormal ratio of unreachable gates:   no
+     Ratio of revised unreachable gates:                       0%
+     All primary input bus ordering is consistent:             yes
+     All primary output bus ordering is consistent:            yes
+     DFF/DLAT not compared due to disabled clock port(s):        0
+     Always X compared point is detected:                      not checked
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+     Number of EQ compare points:                              3287
+     Number of NON-EQ compare points:                          0
+     Number of Aborted compare points:                         0
+     Number of Uncompared compare points :                     0
+================================================================================
