@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Fri Apr 25 21:46:02 2025                
+#  Created on Mon Apr 28 00:45:53 2025                
 #                                                     
 #######################################################
 
@@ -92,3 +92,4 @@ set_db check_drc_limit 1000
 check_drc
 set_db check_drc_area {0 0 0 0}
 check_connectivity -type all -error 1000 -warning 50
+write_db saved_design
