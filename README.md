@@ -76,17 +76,19 @@ The following tools and libraries are required to reproduce this workflow:
     ```
 
 2. **Pre-Synthesis Simulation**:
-    ```bash
-    cd Pre-Synthesis_Simulation/
-    ```
+
     - To run the testbench in **Xilinx Vivado**, type below command.
         ```bash
+        cd Pre-Synthesis_Simulation/
         vivado &
         ```
         Click on **Open Project** , navigate to vivado_simulation folder and open *vivado_simulation.xpr*
-    
+
+    OR
+
     - To run the testbench in **Cadence Xcelium**, type below command.
         ```bash
+        cd Pre-Synthesis_Simulation/
         xrun -f filelist.txt -access +rwc -gui &
         ```
         Where **filelist.txt** is the list of verilog files including testbench and design files.
@@ -126,11 +128,14 @@ The following tools and libraries are required to reproduce this workflow:
         ```bash
         cd Equivalence_Checking/
         lec -XL -color -64 -dofile systolic.do
+        ```
     OR
+
     - To run equivalence checking in Terminal only:
         ```bash
         cd Equivalence_Checking/
         lec -XL -nogui -color -64 -dofile systolic.do
+        ```
     - LEC Verification Report:
         ```bash
         ================================================================================
