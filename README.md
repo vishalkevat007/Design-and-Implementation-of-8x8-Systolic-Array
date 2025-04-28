@@ -73,6 +73,7 @@ The following tools and libraries are required to reproduce this workflow:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/vishalkevat007/Design-and-Implementation-of-8x8-Systolic-Array.git
+    cd Design-and-Implementation-of-8x8-Systolic-Array/
     ```
 
 2. **Pre-Synthesis Simulation**:
@@ -161,6 +162,7 @@ The following tools and libraries are required to reproduce this workflow:
 
     - To execute the PnR flow:
         ```bash
+        cd PNR/
         innovus -stylus
         source runPnR.tcl
     - Physical Layout:
@@ -170,6 +172,7 @@ The following tools and libraries are required to reproduce this workflow:
     </div>
     - Final GDSII, timing reports, and layout files are available inside the PNR/ directory.
 
+---
 
 ## Contributors
 - [Vishal Kevat](https://github.com/vishalkevat007)  
