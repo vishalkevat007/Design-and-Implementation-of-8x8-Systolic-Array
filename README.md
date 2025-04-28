@@ -52,19 +52,16 @@ This project covers the complete digital design flow for the 8×8 systolic array
 - **Tools**: Cadence Innovus with **Cadence 45nm Library** (run using `source runPnR.tcl` in Innovus).
 - **Steps**: Floorplanning, placement, clock tree synthesis, routing, and GDSII generation.
 
-### 6. Gate-Level Simulation (GLS)
-- **Location**: `Gate-Level-Simulation/`
-- **Purpose**: Validates post-PnR netlist with timing annotations.
-
 ---
 
 ## Prerequisite Tools
 The following tools and libraries are required to reproduce this workflow:
 1. **Cadence EDA Tools**:
+   - **Xcelium 23.03** (Pre-Synthesis Simulation - Optional)
    - **Genus 21.1** (Logic Synthesis)
    - **Innovus 21.1** (Physical Design & Routing)
    - **Conformal 24.10** (Equivalence Checking)
-2. **Xilinx Vivado** (Pre-Synthesis Simulation)
+2. **Xilinx Vivado 2023.2** (Pre-Synthesis Simulation)
 3. **Cadence 45nm PDK Library Files**:
    - Standard cell libraries, technology files, and parasitic extraction models.
 
@@ -74,28 +71,82 @@ The following tools and libraries are required to reproduce this workflow:
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/vishalkevat007/Design-and-Implementation-of-8x8-Systolic-Array.git
-2. **Synthesis**:
+    ```
+
+2. **Pre-Synthesis Simulation**:
+    ```bash
+    cd Pre-Synthesis_Simulation/
+    ```
+    - To run the testbench in **Xilinx Vivado**, type below command.
+        ```bash
+        vivado &
+        ```
+        Click on **Open Project** , navigate to vivado_simulation folder and open *vivado_simulation.xpr*
+    
+    - To run the testbench in **Cadence Xcelium**, type below command.
+        ```bash
+        xrun -f filelist.txt -access +rwc -gui &
+        ```
+        Where **filelist.txt** is the list of verilog files including testbench and design files.
+        ```bash
+        test_tpu.v
+        tpu_top.v
+        addr_sel.v
+        quantize.v
+        systolic.v
+        systolic_controll.v
+        write_out.v
+        sram_128x32b.v
+        sram_16x128b.v
+        ```
+        Click on *test_tpu* design and then **Send selected object to Target Waveform** and finally run the simulation by clicking on the play button.
+        You will see the simulation waveforms and display prints on the Simvision Console
+
+3. **Synthesis**:
     - Synthesis is performed using Cadence Genus.
 
     - To run synthesis:
         ```bash
         cd Synthesis/
         genus -f syn.tcl
-
     - Post-Synthesis Schematic:  
     ![Synthesized Schematic](Synthesis/gui_schematic.gif)  
     *Fig 2. Schematic of the 8x8 systolic array generated after synthesis.*
     - The generated netlists and synthesis reports are located in the Synthesis/output/ directory.
 
-3. **Equivalence Check**:
+4. **Logic Equivalence Check**:
     - Formal equivalence checking between the RTL and the synthesized netlist is done using Cadence Conformal.
 
-    - To run equivalence checking:
+    - To run equivalence checking in LEC GUI only:
+        ```bash
+        cd Equivalence_Checking/
+        lec -XL -color -64 -dofile systolic.do
+    OR
+    - To run equivalence checking in Terminal only:
         ```bash
         cd Equivalence_Checking/
         lec -XL -nogui -color -64 -dofile systolic.do
+    - LEC Verification Report:
+        ```bash
+        ================================================================================
+                            Verification Report
+        --------------------------------------------------------------------------------
+        Category                                                                  Count
+        --------------------------------------------------------------------------------
+        1. Non-standard modeling options used:                                      0
+        --------------------------------------------------------------------------------
+        2. Incomplete verification:                                                 0
+        --------------------------------------------------------------------------------
+        3. User modification to design:                                             0
+        --------------------------------------------------------------------------------
+        4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+        --------------------------------------------------------------------------------
+        5. Design ambiguity:                                                        0
+        --------------------------------------------------------------------------------
+        6. Compare Results:                                                        PASS
+        ================================================================================    
 
-4. **Floorplanning and Routing (PnR)**:
+5. **Floorplanning and Routing (PnR)**:
     - Floorplanning, placement, clock tree synthesis, and routing are performed using Cadence Innovus.
 
     - To execute the PnR flow:
@@ -104,7 +155,7 @@ The following tools and libraries are required to reproduce this workflow:
         source runPnR.tcl
     - Physical Layout:
     ![Layout](images/layout.png)
-    *Fig 2. Physical Layout of the design.*
+    *Fig 3. Physical Layout of the design.*
     - Final GDSII, timing reports, and layout files are available inside the PNR/ directory.
 
 
