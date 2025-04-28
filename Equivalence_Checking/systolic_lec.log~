@@ -1,0 +1,123 @@
+                          CONFORMAL (R)
+                   Version 24.10-p100 (30-May-2024) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2024. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 332 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.44    seconds
+Elapse time  : 1       seconds
+Memory usage : 68.56   M bytes
+// Command: read library ../LIB/slow_vdd1v0_basicCells.v -verilog -both
+// Parsing file ../LIB/slow_vdd1v0_basicCells.v ...
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:56)
+// Warning: (VLG5.5) Internal primitive is recognized (occurrence:120)
+// Warning: (VLG5.6) Named port association is ignored for primitive gate (occurrence:120)
+// Warning: (IGN7.1) trireg net is modeled as a latch to hold value (occurrence:1)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Note: (HRC3.5b) Open output port connection is detected (occurrence:80)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.56    seconds
+Elapse time  : 1       seconds
+Memory usage : 91.73   M bytes
+// Command: read design \
+//             ../RTL/tpu_top.v \
+//             ../RTL/addr_sel.v \
+//             ../RTL/quantize.v \
+//             ../RTL/systolic.v \
+//             ../RTL/systolic_controll.v \
+//             ../RTL/write_out.v \
+//             -verilog -golden
+// Parsing file ../RTL/tpu_top.v ...
+// Parsing file ../RTL/addr_sel.v ...
+// Parsing file ../RTL/quantize.v ...
+// Parsing file ../RTL/systolic.v ...
+// Parsing file ../RTL/systolic_controll.v ...
+// Parsing file ../RTL/write_out.v ...
+// Golden root module is set to 'tpu_top'
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:12)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:72)
+// Note: (RTL1.9h) Parameter declaration with no type or range specification (occurrence:26)
+// Warning: (RTL5.3) Case expressions/items are resized (occurrence:3)
+// Note: (RTL5.5a) Default case item with non-X assignment(s) (occurrence:11)
+// Warning: (RTL7.3) Array index in RHS might be out of range (occurrence:24)
+// Warning: (RTL7.10a) Comparison with different data sizes (occurrence:64)
+// Warning: (RTL7.10d) Comparison with positive constant of different signedness (occurrence:7)
+// Warning: (RTL7.10e) Relational comparison of different data sizes and signed operand(s) (occurrence:16)
+// Warning: (RTL7.11b) Unsigned reference with index/part selection to a signed variable (occurrence:16)
+// Note: (RTL8.1) Multiple multipliers/dividers are in module/entity (occurrence:1)
+// Note: Read VERILOG design successfully
+CPU time     : 0.80    seconds
+Elapse time  : 2       seconds
+Memory usage : 114.94  M bytes
+// Command: read design ../Synthesis/outputs/tpu_netlist.v -verilog -revised
+// Parsing file ../Synthesis/outputs/tpu_netlist.v ...
+// Revised root module is set to 'tpu_top'
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:1)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:8)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:8)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:1)
+// Warning: There are 8 undriven nets in Revised
+// Warning: There are 8 undriven pins in Revised
+// Note: Read VERILOG design successfully
+CPU time     : 1.76    seconds
+Elapse time  : 3       seconds
+Memory usage : 131.56  M bytes
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Warning: (F34) Converted 384 X assignment(s) as don't care(s)
+// Processing Revised ...
+// Modeling Revised ...
+// (F28) Converted 8 internal output port(s) to inout port(s)
+CPU time     : 2.85    seconds
+Elapse time  : 4       seconds
+Memory usage : 189.06  M bytes
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            131    446    2841      3418    
+--------------------------------------------------------------------------------
+Revised           131    446    2841      3418    
+================================================================================
+CPU time     : 3.15    seconds
+Elapse time  : 4       seconds
+Memory usage : 191.20  M bytes
+// Command: add compared point -all
+// 3287 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           446    2841      3287    
+================================================================================
+CPU time     : 20.01   seconds
+Elapse time  : 21      seconds
+Memory usage : 266.09  M bytes
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  0
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+================================================================================
+// Command: exit

@@ -1,0 +1,6 @@
+# To run LEC in GUI
+lec -XL -color -64 -dofile systolic.do
+
+# To run LEC in terminal (without GUI)
+#lec -XL -nogui -color -64 -dofile systolic.do
+
