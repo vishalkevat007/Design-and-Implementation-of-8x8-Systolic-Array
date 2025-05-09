@@ -174,6 +174,12 @@ The following tools and libraries are required to reproduce this workflow:
 
 ---
 
+## Full Report
+
+For detailed analysis, benchmarking methodology, and results, refer to the [Project Report (PDF)](Kevat_Kurdiya_Tulugu_FinalProject.pdf).
+
+---
+
 ## Contributors
 - [Vishal Kevat](https://github.com/vishalkevat007)  
 - [Jagdish Kurdiya](https://github.com/vishalkevat007)
